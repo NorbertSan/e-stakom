@@ -1,6 +1,13 @@
 // year
 document.getElementById("yr").textContent = new Date().getFullYear();
 
+// circuit background
+fetch("assets/circuit.svg")
+  .then((r) => r.text())
+  .then((svg) => {
+    document.getElementById("circuit-container").innerHTML = svg;
+  });
+
 // hamburger
 const burger = document.getElementById("burger");
 const menu = document.getElementById("mobile-menu");
